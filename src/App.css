@@ -1,0 +1,15 @@
+* {
+  background-color: rgb(114, 114, 114);
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.ubuntu {
+  font-family: "Ubuntu";
+}
+
+.title {
+  text-align: center;
+  margin-top: 2rem;
+}

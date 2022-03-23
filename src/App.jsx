@@ -1,15 +1,32 @@
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
+import "./App.css";
+import Cards from "./components/Cards/Cards";
+import Filters from "./components/Filter/Filters";
+
 function App() {
   return (
     <>
-      <nav className="navbar navbar-dark bg-dark">
-        <div className="container">
-          <a className="navbar-brand text-uppercase" href="/">
-            Rick and morty
-          </a>
-        </div>
-      </nav>
+      <div className="App">
+        <h1 className="ubuntu title">
+          Rick & Morty <span className="text-primary">Wiki</span>
+        </h1>
 
-      <div>hola</div>
+        <div className="container">
+          <div className="row">
+            <div className="col-3">
+              <Filters />
+            </div>
+            <div className="col-8">
+              <div className="row">
+                <Cards />
+                <Cards />
+                <Cards />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
