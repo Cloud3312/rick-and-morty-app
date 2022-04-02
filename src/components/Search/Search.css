@@ -1,0 +1,19 @@
+.input {
+  width: 40%;
+  border-radius: 8px;
+  border: 2px solid #0b5ed7;
+  padding: 10px 10px;
+  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.25);
+}
+
+.input:hover {
+  cursor: pointer;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.btn-search {
+  box-shadow: 1px 3px 9px rgba(0, 0, 0, 0.25);
+}
