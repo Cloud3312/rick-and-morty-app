@@ -4,28 +4,29 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
 import Filters from "./components/Filter/Filters";
+import Pagination from "./components/Pagination/Pagination";
 
 const App = () => {
   let [pageNumber, setPageNumber] = useState(1);
   let [fetchedData, setFetchedData] = useState([]);
   let { info, results } = fetchedData; //data de la api desestructurada
-  let api = `https://rickandmortyapi.com/api/character/?page=1`;
-  console.log(results);
-  //obtengo toda la data de la api
-  // useEffect(() => {
-  //   const getDataFromAPI = async () => {
-  //     const data = await fetch(api).then((res) => res.json());
-  //     setFetchedData(data);
-  //   };
-  //   getDataFromAPI();
-  // }, [api]);
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`;
 
+  //obtengo toda la data de la api
   useEffect(() => {
-    (async function () {
+    const getDataFromAPI = async () => {
       const data = await fetch(api).then((res) => res.json());
       setFetchedData(data);
-    })();
+    };
+    getDataFromAPI();
   }, [api]);
+
+  // useEffect(() => {
+  //   (async function () {
+  //     const data = await fetch(api).then((res) => res.json());
+  //     setFetchedData(data);
+  //   })();
+  // }, [api]);
 
   return (
     <>
@@ -46,6 +47,7 @@ const App = () => {
             </div>
           </div>
         </div>
+        <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
       </div>
     </>
   );
