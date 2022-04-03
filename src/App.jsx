@@ -3,16 +3,19 @@ import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
-import Filters from "./components/Filter/Filters";
+import Filters from "./components/Filters/Filters";
 import Pagination from "./components/Pagination/Pagination";
 import Search from "./components/Search/Search";
 
 const App = () => {
   let [pageNumber, setPageNumber] = useState(1);
   let [search, setSearch] = useState("");
+  let [status, setStatus] = useState(""); //Dead,Alive,Unknown
+  let [gender, setGender] = useState("");
+  let [species, setSpecies] = useState("");
   let [fetchedData, setFetchedData] = useState([]);
   let { info, results } = fetchedData; //data de la api desestructurada
-  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}`;
+  let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
   //obtengo toda la data de la api
   useEffect(() => {
@@ -45,9 +48,13 @@ const App = () => {
         />
         <div className="container">
           <div className="row">
-            <div className="col-3">
-              <Filters />
-            </div>
+            <Filters
+              setSpecies={setSpecies}
+              setStatus={setStatus}
+              setPageNumber={setPageNumber}
+              setGender={setGender}
+            />
+
             <div className="col-8">
               <div className="row">
                 <Cards results={results} />
