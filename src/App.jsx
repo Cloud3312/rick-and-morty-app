@@ -38,6 +38,11 @@ const App = () => {
         </h1>
 
         <Search setSearch={setSearch} setPageNumber={setPageNumber} />
+        <Pagination
+          info={info}
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+        />
         <div className="container">
           <div className="row">
             <div className="col-3">
@@ -50,7 +55,11 @@ const App = () => {
             </div>
           </div>
         </div>
-        <Pagination pageNumber={pageNumber} setPageNumber={setPageNumber} />
+        <Pagination
+          info={info}
+          pageNumber={pageNumber}
+          setPageNumber={setPageNumber}
+        />
       </div>
     </>
   );
