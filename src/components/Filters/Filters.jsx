@@ -10,6 +10,7 @@ const Filters = ({ setSpecies, setStatus, setPageNumber, setGender }) => {
     setStatus("");
     setPageNumber("");
     setGender("");
+    console.log("as");
     window.location.reload();
   };
   return (
