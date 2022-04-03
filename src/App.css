@@ -1,5 +1,5 @@
 * {
-  background-color: rgb(114, 114, 114);
+  background-color: rgb(228, 228, 228);
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -9,7 +9,7 @@
   font-family: "Ubuntu";
 }
 
-.title {
+/* .title {
   text-align: center;
   margin-top: 2rem;
-}
+} */
