@@ -25,7 +25,7 @@ const Navbar = () => {
           id="navbarNavAltMarkup"
         >
           {/* activeClassName usa el .active de css, NavLink permite tener una opcion 
-          que muestre un elemento que esta seleccionado */}
+          que muestre un elemento que esta seleccionado.  */}
           <div className="navbar-nav fs-5">
             <NavLink
               activeClassName="active"
@@ -48,6 +48,17 @@ const Navbar = () => {
             >
               Location
             </NavLink>
+
+            {/* tambien se puede usar el NavLink dentro de las listas 
+            Link no tiene la propiedad activeClassName pero NavLink si*/}
+            {/* <ul>
+              <li>
+                <Link to="/"></Link>
+              </li>
+              <li>
+                <NavLink to="/locations"></NavLink>
+              </li>
+            </ul> */}
           </div>
         </div>
       </div>
