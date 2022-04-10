@@ -3,6 +3,10 @@
   font-weight: bold;
 }
 
+.navBarColor {
+  background-color: inherit;
+}
+
 .active {
   border-bottom: 2px solid #0b5ed7;
   font-weight: bold;

@@ -5,9 +5,9 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container">
+      <div className="container navBarColor">
         <Link to="/" className="fs-3 ubuntu navbar-brand ">
-          Rick & Morty <span className="text-primary">Wiki</span>
+          Rick & Morty <span className="text-primary navBarColor">Wiki</span>
         </Link>
         <button
           className="navbar-toggler"
@@ -21,12 +21,12 @@ const Navbar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-end"
+          className="collapse navbar-collapse justify-content-end navBarColor "
           id="navbarNavAltMarkup"
         >
           {/* activeClassName usa el .active de css, NavLink permite tener una opcion 
           que muestre un elemento que esta seleccionado.  */}
-          <div className="navbar-nav fs-5">
+          <div className="navbar-nav fs-5 navBarColor">
             <NavLink
               activeClassName="active"
               to="/"

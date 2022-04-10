@@ -7,7 +7,7 @@ const Search = ({ setSearch, setPageNumber }) => {
     setPageNumber(1);
   };
   return (
-    <form className="d-flex justify-content-center gap-4 mb-5 ">
+    <form className="d-flex justify-content-center gap-4 mb-5 mt-4 ">
       <input
         onChange={handleSearch}
         placeholder="Search for characters"

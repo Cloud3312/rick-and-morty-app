@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Cards from "./components/Cards/Cards";
 import Filters from "./components/Filters/Filters";
@@ -12,7 +12,7 @@ import Episodes from "./Pages/Episodes";
 import Location from "./Pages/Location";
 const App = () => {
   return (
-    <Router>
+    <>
       <div className="App">
         <Navbar />
       </div>
@@ -21,7 +21,7 @@ const App = () => {
         <Route path="/episodes" element={<Episodes />} />
         <Route path="/locations" element={<Location />} />
       </Routes>
-    </Router>
+    </>
   );
 };
 
