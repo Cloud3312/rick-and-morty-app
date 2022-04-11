@@ -9,6 +9,10 @@
   font-family: "Ubuntu";
 }
 
+.title-weight {
+  font-weight: 600;
+}
+
 /* .title {
   text-align: center;
   margin-top: 2rem;

@@ -3,6 +3,7 @@ import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import CardDetails from "./components/Cards/CardDetails";
 import Cards from "./components/Cards/Cards";
 import Filters from "./components/Filters/Filters";
 import Navbar from "./components/Navbar/Navbar";
@@ -18,8 +19,11 @@ const App = () => {
       </div>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/:id" element={<CardDetails />} />
         <Route path="/episodes" element={<Episodes />} />
+        <Route path="/episodes/:id" element={<CardDetails />} />
         <Route path="/locations" element={<Location />} />
+        <Route path="/locations/:id" element={<CardDetails />} />
       </Routes>
     </>
   );
@@ -54,6 +58,7 @@ const Home = () => {
   return (
     <>
       <div className="App">
+        <h1 className="text-center mb-4 mt-3 title-weight">Characters</h1>
         <Search setSearch={setSearch} setPageNumber={setPageNumber} />
         <Pagination
           info={info}
@@ -71,7 +76,7 @@ const Home = () => {
 
             <div className="col-8">
               <div className="row">
-                <Cards results={results} />
+                <Cards page="/" results={results} />
               </div>
             </div>
           </div>

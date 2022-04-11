@@ -1,12 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Cards.css";
-const Cards = ({ results }) => {
+const Cards = ({ results, page }) => {
   let display;
   if (results) {
     display = results.map((result) => {
       let { id, name, image, location, status } = result;
       return (
-        <div key={id} className="col-4 mb-4 position-relative">
+        <Link
+          to={`${page}${id}`}
+          key={id}
+          className="col-4 mb-4 position-relative textDecoration"
+        >
           <div className="cardBorder">
             <img src={image} className={`${`imagem`} img-fluid`} alt="" />
             <div className="content">
@@ -20,7 +25,7 @@ const Cards = ({ results }) => {
           <div className={`${`badge`} position-absolute badge ${status}`}>
             {status}
           </div>
-        </div>
+        </Link>
       );
     });
   } else {

@@ -29,7 +29,7 @@ const Episodes = () => {
   return (
     <div className="container">
       <div className="row">
-        <h1 className="text-center ">
+        <h1 className="centered">
           Episode:{" "}
           <span className="text-primary">{name ? name : "Unkown"}</span>
         </h1>
@@ -46,7 +46,7 @@ const Episodes = () => {
 
         <div className="col-8">
           <div className="row">
-            <Cards results={results} />
+            <Cards page="/episodes/" results={results} />
           </div>
         </div>
       </div>
