@@ -8,12 +8,21 @@ const InputGroup = ({ total, name, setID }) => {
         id={name}
         onChange={(event) => setID(event.target.value)}
       >
-        <option selected>Choose...</option>
+        {/* opcion por defecto */}
+        <option value="1" selected>
+          Choose...
+        </option>
 
-        {/* crea un array de 51 elementos, y a cada elemento le pide 
+        {/* el resto de opciones */}
+        {/* ...Array(cantElementos) crea un array de 51 elementos, y a cada elemento le pide 
         la key, que en este caso seria la posicion,luego se mapea */}
         {[...Array(total).keys()].map((episode) => {
-          return <option value={episode + 1}> Episode - {episode + 1} </option>;
+          return (
+            <option value={episode + 1}>
+              {" "}
+              {name} - {episode + 1}{" "}
+            </option>
+          );
         })}
       </select>
     </div>
