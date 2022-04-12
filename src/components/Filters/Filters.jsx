@@ -14,7 +14,8 @@ const Filters = ({ setSpecies, setStatus, setPageNumber, setGender }) => {
     window.location.reload();
   };
   return (
-    <div className="col-3">
+    //col-lg-3 cuando sea mayor a 1200px, va a ocupar 3 espacios de grid
+    <div className="col-lg-3 col-12 mb-5">
       <div className="text-center fw-bold mb-2">Filter</div>
       <div
         onClick={clearFilter}

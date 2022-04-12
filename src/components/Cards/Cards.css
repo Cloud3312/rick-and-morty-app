@@ -3,6 +3,11 @@
   border-radius: 10px 10px 0 0;
 }
 
+.flexImage {
+  display: flex;
+  flex-direction: column;
+}
+
 .imagem {
   border-radius: 10px 10px 0 0;
 }

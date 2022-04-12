@@ -16,6 +16,8 @@ const Episodes = () => {
       const data = await fetch(api).then((res) => res.json());
       setInfo(data);
 
+      //esto devuelve una lista de promesas, todas son links de personajes
+      //por eso se los recupera con el fetch y se los pasa a json
       let characters = await Promise.all(
         data.characters.map((character) => {
           return fetch(character).then((res) => res.json());
@@ -29,7 +31,7 @@ const Episodes = () => {
   return (
     <div className="container">
       <div className="row">
-        <h1 className="centered">
+        <h1 className="centered mt-3">
           Episode:{" "}
           <span className="text-primary">{name ? name : "Unkown"}</span>
         </h1>
@@ -37,14 +39,15 @@ const Episodes = () => {
           Air Date: {air_date ? air_date : "Unkown"}
         </h5>
       </div>
-
+      {/* lg (for laptops and desktops - 
+        screens equal to or greater than 1200px wide)*/}
       <div className="row">
-        <div className="col-3">
+        <div className="col-12 col-lg-3">
           <h4 className="centered">Pick Episodes</h4>
           <InputGroup name="Episode" total={51} setID={setID} />
         </div>
 
-        <div className="col-8">
+        <div className="col-12 col-lg-8">
           <div className="row">
             <Cards page="/episodes/" results={results} />
           </div>

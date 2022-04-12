@@ -27,7 +27,7 @@ const Location = () => {
   return (
     <div className="container">
       <div className="row">
-        <h1 className="text-center title-bolder">
+        <h1 className="text-center title-bolder mt-3">
           Location:{" "}
           <span className="text-primary">{name ? name : "Unkown"}</span>
         </h1>
@@ -38,15 +38,16 @@ const Location = () => {
           Type: {type ? type : "Unkown"}
         </h6>
       </div>
-
+      {/* lg (for laptops and desktops - 
+        screens equal to or greater than 1200px wide)*/}
       <div className="row">
-        <div className="col-3">
+        <div className="col-12 col-lg-3">
           <h4 className="centered">Pick Location</h4>
           {/* total es la cantidad de locations que hay */}
           <InputGroup name="Location" total={126} setID={setID} />
         </div>
 
-        <div className="col-8">
+        <div className="col-12 col-lg-8">
           <div className="row">
             <Cards page="/locations/" results={results} />
           </div>
