@@ -7,3 +7,10 @@ a {
 a:hover {
   color: rgb(168, 167, 167);
 }
+
+@media (max-width: 768px) {
+  .next,
+  .prev {
+    display: none;
+  }
+}
