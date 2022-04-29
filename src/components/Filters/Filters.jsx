@@ -1,7 +1,7 @@
 import React from "react";
-import Gender from "./Category/Gender";
-import Species from "./Category/Species";
-import Status from "./Category/Status";
+import { Gender } from "./Category/Gender";
+import { Species } from "./Category/Species";
+import { Status } from "./Category/Status";
 import "./Filters.css";
 
 const Filters = ({ setSpecies, setStatus, setPageNumber, setGender }) => {
@@ -31,5 +31,6 @@ const Filters = ({ setSpecies, setStatus, setPageNumber, setGender }) => {
     </div>
   );
 };
-
-export default Filters;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Filters };

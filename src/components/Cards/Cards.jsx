@@ -39,5 +39,6 @@ const Cards = ({ results, page }) => {
   }
   return <>{display}</>;
 };
-
-export default Cards;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Cards };

@@ -1,5 +1,5 @@
 import React from "react";
-import FilterBtn from "../FilterBtn";
+import { FilterBtn } from "../FilterBtn";
 
 const Gender = ({ setGender, setPageNumber }) => {
   let genders = ["Female", "Male", "Genderless", "Unknown"];
@@ -39,5 +39,6 @@ const Gender = ({ setGender, setPageNumber }) => {
     </div>
   );
 };
-
-export default Gender;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Gender };

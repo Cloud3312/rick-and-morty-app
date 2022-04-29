@@ -65,5 +65,6 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Navbar };

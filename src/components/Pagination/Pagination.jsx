@@ -50,5 +50,6 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
     </>
   );
 };
-
-export default Pagination;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Pagination };

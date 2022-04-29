@@ -1,5 +1,5 @@
 import React from "react";
-import FilterBtn from "../FilterBtn";
+import { FilterBtn } from "../FilterBtn";
 
 const Status = ({ setStatus, setPageNumber }) => {
   let status = ["Alive", "Dead", "Unknown"];
@@ -45,5 +45,7 @@ const Status = ({ setStatus, setPageNumber }) => {
     </div>
   );
 };
-
-export default Status;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+// export default Status
+export { Status };

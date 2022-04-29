@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Cards from "../components/Cards/Cards";
-import InputGroup from "../components/Filters/Category/InputGroup";
+import { Cards } from "../components/Cards/Cards";
+import { InputGroup } from "../components/Filters/Category/InputGroup";
 import "./Episodes.css";
 
 const Episodes = () => {
@@ -33,7 +33,7 @@ const Episodes = () => {
       <div className="row">
         <h1 className="centered mt-3">
           Episode:{" "}
-          <span className="text-primary">{name ? name : "Unkown"}</span>
+          <span className="text-primary">{name ? name : "Unknown"}</span>
         </h1>
         <h5 className="text-center mb-4 ">
           Air Date: {air_date ? air_date : "Unkown"}
@@ -56,5 +56,6 @@ const Episodes = () => {
     </div>
   );
 };
-
-export default Episodes;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Episodes };

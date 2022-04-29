@@ -3,14 +3,14 @@ import "bootstrap/dist/js/bootstrap";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import CardDetails from "./components/Cards/CardDetails";
-import Cards from "./components/Cards/Cards";
-import Filters from "./components/Filters/Filters";
-import Navbar from "./components/Navbar/Navbar";
-import Pagination from "./components/Pagination/Pagination";
-import Search from "./components/Search/Search";
-import Episodes from "./Pages/Episodes";
-import Location from "./Pages/Location";
+import { CardDetails } from "./components/Cards/CardDetails";
+import { Cards } from "./components/Cards/Cards";
+import { Filters } from "./components/Filters/Filters";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Pagination } from "./components/Pagination/Pagination";
+import { Search } from "./components/Search/Search";
+import { Episodes } from "./Pages/Episodes";
+import { Location } from "./Pages/Location";
 const App = () => {
   return (
     <>
@@ -90,5 +90,6 @@ const Home = () => {
     </>
   );
 };
-
-export default App;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { App };

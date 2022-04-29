@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Cards from "../components/Cards/Cards";
-import InputGroup from "../components/Filters/Category/InputGroup";
+import { Cards } from "../components/Cards/Cards";
+import { InputGroup } from "../components/Filters/Category/InputGroup";
 import "./Location.css";
 const Location = () => {
   let [id, setID] = useState(1);
@@ -56,5 +56,6 @@ const Location = () => {
     </div>
   );
 };
-
-export default Location;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Location };

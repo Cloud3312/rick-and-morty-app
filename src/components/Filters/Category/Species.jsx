@@ -1,5 +1,5 @@
 import React from "react";
-import FilterBtn from "../FilterBtn";
+import { FilterBtn } from "../FilterBtn";
 
 const Species = ({ setSpecies, setPageNumber }) => {
   let species = [
@@ -51,5 +51,6 @@ const Species = ({ setSpecies, setPageNumber }) => {
     </div>
   );
 };
-
-export default Species;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Species };

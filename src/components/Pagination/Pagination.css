@@ -8,6 +8,10 @@ a:hover {
   color: rgb(168, 167, 167);
 }
 
+.btn a {
+  padding: 8px 3px;
+}
+
 @media (max-width: 768px) {
   .next,
   .prev {

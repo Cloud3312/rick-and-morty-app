@@ -23,5 +23,6 @@ const FilterBtn = ({ setPageNumber, items, task, name, index }) => {
     </div>
   );
 };
-
-export default FilterBtn;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { FilterBtn };

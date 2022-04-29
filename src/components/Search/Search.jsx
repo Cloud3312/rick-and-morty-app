@@ -24,5 +24,6 @@ const Search = ({ setSearch, setPageNumber }) => {
     </form>
   );
 };
-
-export default Search;
+// en vez del default, se hace con {} para que todo el
+// team lo importe de la misma forma
+export { Search };
